@@ -1,0 +1,41 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+backend/venv/
+.pytest_cache/
+
+# Large NISAR Raw Satellite Data (11 GB+ each)
+data/
+*.h5
+*.hdf5
+D:/SARvatra_labs/data/
+D:/SARvatra/Data/Raw/
+
+# Workspace intermediate caches (preserve structure, exclude large artifacts)
+workspace/temporary/*
+workspace/processed/*.tif
+!workspace/processed/.gitkeep
+!workspace/previews/.gitkeep
+!workspace/reports/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Intermediate screenshots
+docs/*test*.png
+docs/master_*.png
+docs/live_hero_preview.png
+
+
+.vercel
+.env*

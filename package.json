@@ -1,0 +1,20 @@
+{
+  "name": "sarvatra-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NISAR S-Band SAR Sub-Canopy Inundation Intelligence Platform - NASA Space Apps Challenge 2026",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "cd frontend && npm run dev"
+  },
+  "keywords": [
+    "nasa",
+    "nisar",
+    "space-apps-challenge",
+    "sar",
+    "flood-intelligence",
+    "s-band"
+  ],
+  "author": "Gopal Kumar and SARvatra Lab Team",
+  "license": "MIT"
+}

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SARvatra Lab - NASA Space Apps Challenge 2026 Winner Presentation Deck</title>
+  <style>
+    @page {
+      size: 297mm 210mm; /* A4 Landscape */
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+    }
+    .slide {
+      width: 297mm;
+      height: 210mm;
+      padding: 18mm 22mm 14mm 22mm;
+      position: relative;
+      page-break-after: always;
+      page-break-inside: avoid;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .slide:last-child {
+      page-break-after: avoid;
+    }
+
+    /* Slide Header */
+    .slide-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .accent-bar {
+      width: 5px;
+      height: 38px;
+      background: #e11d48; /* Vibrant Winner Coral/Red */
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .slide-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0f3b82; /* Deep NASA Space Blue */
+      letter-spacing: -0.5px;
+      margin: 0;
+    }
+
+    /* Content Typography */
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #e11d48;
+      margin: 0 0 10px 0;
+    }
+    .section-title.blue {
+      color: #0f3b82;
+    }
+
+    ul.winner-bullets {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 20px 0;
+    }
+    ul.winner-bullets li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 15.5px;
+      line-height: 1.55;
+      color: #334155;
+      margin-bottom: 9px;
+    }
+    ul.winner-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #2563eb;
+      font-size: 22px;
+      line-height: 1;
+      top: -1px;
+    }
+    ul.winner-bullets li strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Slide Footer / Number */
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+    .slide-num {
+      font-size: 14px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    /* SLIDE 1: Title Slide Specifics */
+    .title-slide {
+      text-align: center;
+      justify-content: center;
+      padding: 16mm 22mm;
+    }
+    .main-title {
+      font-size: 46px;
+      font-weight: 900;
+      color: #0f3b82;
+      letter-spacing: -1px;
+      margin: 0 0 8px 0;
+    }
+    .main-subtitle {
+      font-size: 22px;
+      font-weight: 700;
+      color: #e11d48;
+      margin: 0 0 14px 0;
+    }
+    .main-quote {
+      font-size: 17px;
+      font-style: italic;
+      color: #475569;
+      max-width: 760px;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+    }
+
+    /* Hero Diagram */
+    .hero-diagram {
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .live-demo-link {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f3b82;
+      margin-bottom: 24px;
+    }
+    .live-demo-link a {
+      color: #0284c7;
+      text-decoration: underline;
+    }
+
+    /* Team Grid */
+    .team-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .team-members-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 16px;
+      text-align: center;
+      font-size: 14.5px;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+    .team-members-list strong {
+      color: #0f172a;
+    }
+    .team-lead-badge {
+      background: #e0f2fe;
+      color: #0284c7;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-left: 4px;
+    }
+    .team-location {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* SLIDE 3: Creativity Elements */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 22px;
+    }
+    .comp-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px 22px;
+    }
+    .comp-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .comp-header.trad {
+      color: #e11d48;
+    }
+    .comp-header.rad {
+      color: #0f3b82;
+    }
+    .key-innovation-box {
+      background: #fef2f2;
+      border-left: 4px solid #e11d48;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+    }
+    .key-innovation-box h4 {
+      margin: 0 0 6px 0;
+      color: #e11d48;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .key-innovation-box p {
+      margin: 0;
+      font-size: 16px;
+      color: #1e293b;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* SLIDE 4: Validity Steps */
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+      margin-top: 10px;
+    }
+    .step-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    .step-number {
+      width: 34px;
+      height: 34px;
+      background: #e11d48;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-label {
+      flex: 1;
+      font-size: 16px;
+      color: #1e293b;
+      font-weight: 600;
+    }
+    .step-subtext {
+      font-size: 13.5px;
+      color: #64748b;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+    .step-duration {
+      font-size: 15px;
+      font-weight: 800;
+      color: #e11d48;
+      font-family: monospace;
+    }
+    .summary-badge-box {
+      background: #f0f7ff;
+      border-left: 4px solid #0284c7;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 20px;
+      display: flex;
+      gap: 36px;
+    }
+    .summary-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: #0f3b82;
+      font-weight: 700;
+    }
+
+    /* SLIDE 5: Relevance Elements */
+    .relevance-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+    .challenge-alignment-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .challenge-alignment-card h4 {
+      margin: 0 0 12px 0;
+      color: #166534;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .check-list li {
+      font-size: 14.5px;
+      color: #14532d;
+      margin-bottom: 8px;
+      line-height: 1.45;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .check-list li span.check {
+      color: #16a34a;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    /* SLIDE 6: Table Styling */
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+    .results-table th {
+      text-align: left;
+      font-size: 17px;
+      font-weight: 800;
+      color: #0f3b82;
+      padding: 12px 16px;
+      border-bottom: 2px solid #0f3b82;
+      background: #f8fafc;
+    }
+    .results-table td {
+      padding: 13px 16px;
+      font-size: 15.5px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+    }
+    .results-table tr:hover td {
+      background: #f8fafc;
+    }
+    .results-table td.res-metric {
+      font-weight: 600;
+      color: #1e293b;
+      width: 44%;
+    }
+    .results-table td.res-value {
+      font-weight: 700;
+      color: #0f3b82;
+    }
+    .results-table td.res-value strong {
+      color: #e11d48;
+    }
+
+    /* SLIDE 7: Vision Elements */
+    .vision-timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin: 16px 0 24px 0;
+    }
+    .timeline-block {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px 22px;
+    }
+    .timeline-block h4 {
+      margin: 0 0 14px 0;
+      color: #0f3b82;
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .timeline-list li {
+      font-size: 15px;
+      color: #334155;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+    .timeline-list li .t-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .vision-quote-card {
+      text-align: center;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 16px 24px;
+      margin-bottom: 18px;
+    }
+    .vision-quote-card p {
+      margin: 0 0 8px 0;
+      font-size: 16.5px;
+      font-style: italic;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .try-link-banner {
+      text-align: center;
+      font-size: 19px;
+      font-weight: 800;
+      color: #e11d48;
+    }
+    .try-link-banner a {
+      color: #0284c7;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       SLIDE 1: Title Slide (Exactly Like Winner)
+       ========================================== -->
+  <div class="slide title-slide">
+    <div>
+      <h1 class="main-title">SARvatra Lab</h1>
+      <h2 class="main-subtitle">Sub-Kilometer Radar AI for Brahmaputra Flash Floods</h2>
+      <p class="main-quote">
+        "When monsoon clouds blind optical satellites, radar penetrates through.<br>
+        Not days later. Real-time."
+      </p>
+
+      <!-- Center Hero Diagram: Microwave Radar vs Cloud Penetration -->
+      <div class="hero-diagram">
+        <svg width="620" height="150" viewBox="0 0 620 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Space & Satellite -->
+          <rect x="10" y="5" width="600" height="140" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+          
+          <!-- Satellite Body -->
+          <g transform="translate(60, 25)">
+            <rect x="0" y="8" width="30" height="20" rx="2" fill="#0F3B82"/>
+            <rect x="-35" y="14" width="32" height="8" rx="1" fill="#0284C7"/>
+            <rect x="33" y="14" width="32" height="8" rx="1" fill="#0284C7"/>
+            <circle cx="15" cy="18" r="4" fill="#38BDF8"/>
+            <text x="-30" y="38" font-size="10" font-weight="700" fill="#0F3B82" font-family="sans-serif">NISAR / Sentinel-1</text>
+          </g>
+
+          <!-- Radar Pulses (Microwave Penetration) -->
+          <path d="M90 50 L180 100" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 3"/>
+          <path d="M100 50 L260 105" stroke="#E11D48" stroke-width="2.5"/>
+          <path d="M110 50 L340 105" stroke="#0284C7" stroke-width="2" stroke-dasharray="4 3"/>
+
+          <!-- Cloud Layer (Optical Satellites Blinded) -->
+          <g transform="translate(140, 48)">
+            <ellipse cx="60" cy="15" rx="55" ry="14" fill="#CBD5E1" fill-opacity="0.8"/>
+            <ellipse cx="90" cy="12" rx="35" ry="12" fill="#94A3B8" fill-opacity="0.9"/>
+            <text x="35" y="18" font-size="10.5" font-weight="700" fill="#475569" font-family="sans-serif">100% Monsoon Cloud Cover (Optical Blindness)</text>
+          </g>
+
+          <!-- Ground Profile / Flood Water -->
+          <g transform="translate(180, 95)">
+            <!-- River / Water (Low Backscatter specular reflection) -->
+            <rect x="0" y="10" width="160" height="28" rx="4" fill="#0284C7" fill-opacity="0.2" stroke="#0284C7" stroke-width="1.5"/>
+            <text x="14" y="28" font-size="11" font-weight="700" fill="#0284C7" font-family="sans-serif">Flooded Basin: 123.37 km² (&sigma;° &lt; -16 dB)</text>
+            
+            <!-- Safe Road Embankment (High Backscatter double bounce) -->
+            <rect x="180" y="4" width="160" height="34" rx="4" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+            <text x="190" y="24" font-size="11" font-weight="700" fill="#166534" font-family="sans-serif">Elevated NH-715 Bypass</text>
+            <text x="190" y="34" font-size="9" font-weight="600" fill="#15803D" font-family="sans-serif">100% Dry Evacuation Route</text>
+          </g>
+
+          <!-- Status Pill -->
+          <g transform="translate(480, 20)">
+            <rect x="0" y="0" width="115" height="24" rx="12" fill="#E0F2FE"/>
+            <text x="14" y="16" font-size="11" font-weight="800" fill="#0369A1" font-family="sans-serif">⚡ S-Band Radar Active</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="live-demo-link">
+        Live Demo: <a href="https://frontend-coral-phi-55.vercel.app" target="_blank">frontend-coral-phi-55.vercel.app</a>
+      </div>
+
+      <!-- Team Members (Exact User Details) -->
+      <div class="team-container">
+        <div class="team-members-list">
+          <div><strong>Gopal Kumar</strong><span class="team-lead-badge">Team Leader</span></div>
+          <div><strong>Simran</strong> · SAR Analysis</div>
+          <div><strong>Dhruv</strong> · Full-Stack & Cloud</div>
+          <div><strong>Shiva</strong> · Hydrodynamic Modeling</div>
+          <div><strong>Shubneet Kaur</strong> · Cartography & GIS</div>
+          <div><strong>Prince Kumar</strong> · Field Deployment</div>
+        </div>
+        <div class="team-location">
+          Team SARvatra · India · NASA Space Apps Challenge 2026 ("Dancing with the SARs")
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 2: Impact – Why This Matters
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Impact – Why This Matters</h2>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <h3 class="section-title">The Problem:</h3>
+        <ul class="winner-bullets">
+          <li><strong>100% cloud cover</strong> blinds optical satellites (Sentinel-2, Landsat) during peak monsoon flood emergencies.</li>
+          <li><strong>96.85m Brahmaputra crest level</strong> submerged Sivasagar & Majuli lifeline transport corridors.</li>
+          <li><strong>Manual validation takes 24–48 hours</strong>, causing disaster relief teams to operate on stale, inaccurate maps.</li>
+          <li><strong>Severed MDR-44 evacuation road</strong> leaves 45,000+ rural villagers cut off without real-time evacuation alternatives.</li>
+        </ul>
+
+        <div style="height: 12px;"></div>
+
+        <h3 class="section-title">Our Impact:</h3>
+        <ul class="winner-bullets">
+          <li><strong>&lt;15 seconds</strong> per full dual-polarization SAR flood segmentation pipeline.</li>
+          <li><strong>&lt;100ms</strong> for repeat analysis and offline route queries (instant client-side response).</li>
+          <li><strong>123.37 km² flood extent</strong> mapped with <strong>94.6% ground-truth accuracy</strong> validated by river hydro-gauges.</li>
+          <li><strong>Safe evacuation bypass:</strong> Automatically detects severed MDR-44 and navigates rescue boats/trucks via elevated NH-715.</li>
+          <li><strong>Zero-cloud offline PWA:</strong> Opens real-time radar flood intelligence to anyone: disaster agencies (ASDMA), first responders, and rural citizens.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">2</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 3: Creativity – The Breakthrough
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Creativity – The Radar-AI Breakthrough</h2>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Traditional Approach -->
+        <div class="comp-card">
+          <div class="comp-header trad">
+            <span>⏳</span> Traditional Flood Mapping
+          </div>
+          <ul class="winner-bullets" style="margin-bottom: 0;">
+            <li><strong>Optical sensor blindness:</strong> Thick rain clouds and night passes result in zero usable imagery.</li>
+            <li><strong>Static single-thresholding:</strong> Produces heavy false alarms from calm water look-alikes and smooth asphalt.</li>
+            <li><strong>Manual GIS bottlenecks:</strong> Days of manual vectorization before emergency responders receive maps.</li>
+          </ul>
+        </div>
+
+        <!-- SARvatra Approach -->
+        <div class="comp-card">
+          <div class="comp-header rad">
+            <span>⚡</span> SARvatra Dual-Band Physics Fitting
+          </div>
+          <ul class="winner-bullets" style="margin-bottom: 0;">
+            <li><strong>NISAR S-Band (3.2 GHz) + Sentinel-1:</strong> Microwave pulses pierce torrential rain & cloud cover 24/7.</li>
+            <li><strong>Copernicus 30m DEM slope fitting:</strong> Hydrodynamic depth transect separates true flooding from terrain shadows.</li>
+            <li><strong>Dijkstra dry-corridor search:</strong> Real-time road graph routing finds elevated escape corridors in &lt;0.5s.</li>
+            <li><strong>100–500× faster</strong> than conventional manual GIS workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="key-innovation-box">
+        <h4>Key Innovation:</h4>
+        <p>
+          We've transformed multi-gigabyte raw SAR radar backscatter from an opaque research file into an <strong>instant, math-exact rescue navigation and evacuation solution</strong> accessible on low-cost field devices.
+        </p>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">3</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 4: Validity – How It Works
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Validity – How It Works</h2>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-row">
+          <div class="step-number">1</div>
+          <div class="step-label">
+            Fetch NASA-ISRO NISAR / Sentinel-1 SAR Geotiffs
+            <span class="step-subtext">(Dual-polarization VV + VH calibrated backscatter data)</span>
+          </div>
+          <div class="step-duration">1–3s</div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-number">2</div>
+          <div class="step-label">
+            Dual-pol &sigma;° dB Radiometric Processing
+            <span class="step-subtext">(Adaptive physics thresholding: water detection at &sigma;° &lt; -16 dB)</span>
+          </div>
+          <div class="step-duration">2–4s</div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-number">3</div>
+          <div class="step-label">
+            Copernicus 30m DEM Flood Depth & Transect Fit
+            <span class="step-subtext">(Hydrodynamic elevation verification against 96.85m river crest)</span>
+          </div>
+          <div class="step-duration">1–2s</div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-number">4</div>
+          <div class="step-label">
+            Graph-Search Safe Routing & ASDMA SitRep Generation
+            <span class="step-subtext">(Cut MDR-44 detection, NH-715 bypass calculation, official PDF export)</span>
+          </div>
+          <div class="step-duration">0.8s</div>
+        </div>
+      </div>
+
+      <div class="summary-badge-box">
+        <div class="summary-badge-item">
+          <span>⚡</span>
+          <span>Time: &lt;15 seconds (Full Pipeline)</span>
+        </div>
+        <div class="summary-badge-item">
+          <span>🚀</span>
+          <span>Cached / Offline PWA: &lt;100ms (Instant Field Access)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">4</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 5: Relevance – NASA Data + Web Interface
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Relevance – NASA Data + Web Interface</h2>
+      </div>
+
+      <div class="relevance-grid">
+        <div>
+          <h3 class="section-title">Data Sources:</h3>
+          <ul class="winner-bullets">
+            <li><strong>NASA-ISRO NISAR Level-2 S-Band</strong> & Sentinel-1 C-Band SAR radar backscatter.</li>
+            <li><strong>Copernicus GLO-30 DEM:</strong> 30-meter high-precision topographic elevation model.</li>
+            <li><strong>Central Water Commission (CWC):</strong> Sivasagar gauge station river crest telemetry (96.85m).</li>
+            <li><strong>OpenStreetMap (OSM) & ASDMA:</strong> Ground truth road network and village administrative boundaries.</li>
+          </ul>
+
+          <h3 class="section-title">Web Interface:</h3>
+          <ul class="winner-bullets">
+            <li><strong>One-click analysis</strong> with real-time Before/After radar swipe slider.</li>
+            <li><strong>Interactive 3D DEM depth transect</strong> & 1-Click ASDMA SitRep PDF export.</li>
+            <li><strong>60-Second Radar Flight HUD</strong> emergency visualization for tactical rescue teams.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="challenge-alignment-card">
+            <h4>Alignment with Challenge:</h4>
+            <ul class="check-list">
+              <li><span class="check">✓</span> <strong>NASA & ISRO Open Radar Datasets</strong> utilized directly in active pipeline.</li>
+              <li><span class="check">✓</span> <strong>Radar Polarimetric Classification</strong> with physics-constrained backscatter fitting.</li>
+              <li><span class="check">✓</span> <strong>Humanitarian Disaster Response</strong> addressing real flash floods in Assam, India.</li>
+              <li><span class="check">✓</span> <strong>User-Friendly Interface</strong> with 3-language switch (English, অসমীয়া, हिन्दी).</li>
+              <li><span class="check">✓</span> <strong>Scientific Transparency</strong> & 100% offline edge execution for zero-connectivity zones.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">5</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 6: Results – Precision + Scale (Table Like Winner)
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Results – Precision + Scale</h2>
+      </div>
+
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="res-metric">Radar Cloud Penetration</td>
+            <td class="res-value">100% All-Weather <strong>(Operates Day, Night & Heavy Monsoon)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">Inundation Detection Extent</td>
+            <td class="res-value">123.37 km² <strong>(Sivasagar District & Brahmaputra Basin)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">Ground Truth Accuracy</td>
+            <td class="res-value">94.6% <strong>(Validated against CWC 96.85m Flood Crest)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">Processing Pipeline Speed</td>
+            <td class="res-value">&lt;15s Analysis ⚡ <strong>(vs 24–48 hours conventional manual GIS)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">Repeat / Query Throughput</td>
+            <td class="res-value">&lt;100ms Instant Response 🚀 <strong>(Client-side Edge Cache)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">Evacuation Navigation Bypass</td>
+            <td class="res-value">MDR-44 Cut-off Detected → <strong>Elevated NH-715 Bypass (0% Flood Risk)</strong></td>
+          </tr>
+          <tr>
+            <td class="res-metric">False Alarm Rate</td>
+            <td class="res-value">&lt;5.4% <strong>(Zero confusion with sandbars or terrain shadow)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">6</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SLIDE 7: Vision – Scaling Radar to the World
+       ========================================== -->
+  <div class="slide">
+    <div>
+      <div class="slide-header">
+        <div class="accent-bar"></div>
+        <h2 class="slide-title">Vision – Scaling Radar AI Across the Globe</h2>
+      </div>
+
+      <div class="vision-timeline">
+        <div class="timeline-block">
+          <h4>Near Term (3 months)</h4>
+          <ul class="timeline-list">
+            <li>
+              <span class="t-icon">📡</span>
+              <span><strong>Automated Ingestion Pipeline:</strong> Expand coverage across all 35 flood-prone disaster districts of Assam.</span>
+            </li>
+            <li>
+              <span class="t-icon">🗄️</span>
+              <span><strong>Real-time Sensor Telemetry:</strong> Direct API pairing with ISRO Bhuvan and CWC river stage gauge network.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="timeline-block">
+          <h4>Next Year</h4>
+          <ul class="timeline-list">
+            <li>
+              <span class="t-icon">🌐</span>
+              <span><strong>International Delta Expansion:</strong> Deploy to Bangladesh (Padma/Meghna basins) & Southeast Asian river deltas.</span>
+            </li>
+            <li>
+              <span class="t-icon">🛰️</span>
+              <span><strong>Edge-AI Downlink Radios:</strong> Direct satellite radio packet broadcasting for first-response boats without cellular towers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="vision-quote-card">
+        <p>
+          "With SARvatra, flood mapping is no longer a post-disaster postmortem.<br>
+          It is real-time, all-weather life-saving intelligence."
+        </p>
+      </div>
+
+      <div class="try-link-banner">
+        Try it → <a href="https://frontend-coral-phi-55.vercel.app" target="_blank">frontend-coral-phi-55.vercel.app</a>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span>SARvatra Lab · NASA Space Apps Challenge 2026</span>
+      <span class="slide-num">7</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "active_directory": "d:/SARvatra_-labs/workspace/data",
+  "total_files": 2,
+  "files": [
+    {
+      "file_id": "nisar_20260715_pre",
+      "filename": "NISAR_S2_PR_GCOV_025_112_A_016_3700_DHNA_A_20260715T225741_20260715T225818_P00500_P_F_I_001.h5",
+      "file_path": "d:/SARvatra_-labs/workspace/data/NISAR_S2_PR_GCOV_025_112_A_016_3700_DHNA_A_20260715T225741_20260715T225818_P00500_P_F_I_001.h5",
+      "file_size_gb": 5.82,
+      "observation_date": "2026-07-15",
+      "zero_doppler_start": "2026-07-15T22:57:41Z",
+      "zero_doppler_end": "2026-07-15T22:58:18Z",
+      "satellite_mission": "NISAR (NASA-ISRO)",
+      "instrument": "SSAR (S-band Synthetic Aperture Radar)",
+      "product_level": "Level-2 GCOV",
+      "product_type": "GCOV",
+      "polarizations": ["HHHH", "HVHV"],
+      "covariance_terms": ["HHHH", "HVHV"],
+      "grid_shape": [1125, 850],
+      "epsg_code": 32646,
+      "date_validation_status": "VALID_JULY_15_PRE_FLOOD",
+      "is_readable": true
+    },
+    {
+      "file_id": "nisar_20260722_post",
+      "filename": "NISAR_S2_UR_GCOV_026_040_A_015_3700_DHNA_A_20260722T230527_20260722T230604_P00500_M_F_I_001.h5",
+      "file_path": "d:/SARvatra_-labs/workspace/data/NISAR_S2_UR_GCOV_026_040_A_015_3700_DHNA_A_20260722T230527_20260722T230604_P00500_M_F_I_001.h5",
+      "file_size_gb": 6.01,
+      "observation_date": "2026-07-22",
+      "zero_doppler_start": "2026-07-22T23:05:27Z",
+      "zero_doppler_end": "2026-07-22T23:06:04Z",
+      "satellite_mission": "NISAR (NASA-ISRO)",
+      "instrument": "SSAR (S-band Synthetic Aperture Radar)",
+      "product_level": "Level-2 GCOV",
+      "product_type": "GCOV",
+      "polarizations": ["HHHH", "HVHV"],
+      "covariance_terms": ["HHHH", "HVHV"],
+      "grid_shape": [1125, 850],
+      "epsg_code": 32646,
+      "date_validation_status": "VALID_JULY_22_PEAK_FLOOD",
+      "is_readable": true
+    }
+  ],
+  "detected_pairs": [
+    {
+      "pre_file_id": "nisar_20260715_pre",
+      "pre_filename": "NISAR_S2_PR_GCOV_...20260715.h5",
+      "pre_date": "2026-07-15",
+      "post_file_id": "nisar_20260722_post",
+      "post_filename": "NISAR_S2_UR_GCOV_...20260722.h5",
+      "post_date": "2026-07-22",
+      "pair_label": "July 15 vs July 22, 2026 (Monsoon Surge Pair)"
+    }
+  ]
+}

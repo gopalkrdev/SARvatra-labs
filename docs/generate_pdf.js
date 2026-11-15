@@ -12,10 +12,10 @@ const EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge
 const TEMP_USER_DATA = path.join(os.tmpdir(), 'edge_pdf_profile_' + Date.now());
 
 const FILES_TO_CONVERT = [
-  { html: 'SARvatra_Lab_Winner_Presentation.html', pdf: 'SARvatra_Lab_Winner_Presentation.pdf' },
-  { html: 'SARvatra_Lab_Official_7_Slide_Demo.html', pdf: 'SARvatra_Lab_Official_7_Slide_Demo.pdf' },
-  { html: 'Sivasagar_Disaster_SitRep_Official.html', pdf: 'Sivasagar_Disaster_SitRep_Official.pdf' },
-  { html: 'SARvatra_Portal_Standard_Operating_Procedure.html', pdf: 'SARvatra_Portal_Standard_Operating_Procedure.pdf' }
+  { html: 'SARvatra_Pitch_Deck.html', pdf: 'SARvatra_Pitch_Deck.pdf', copyToRoot: true },
+  { html: 'SARvatra_Technical_Dossier.html', pdf: 'SARvatra_Technical_Dossier.pdf', copyToRoot: false },
+  { html: 'Sivasagar_Disaster_SitRep.html', pdf: 'Sivasagar_Disaster_SitRep.pdf', copyToRoot: false },
+  { html: 'SARvatra_Operating_Manual.html', pdf: 'SARvatra_Operating_Manual.pdf', copyToRoot: false }
 ];
 
 const server = http.createServer((req, res) => {
@@ -91,9 +91,12 @@ async function main() {
     if (fs.existsSync(targetPdfDocs)) {
       const stats = fs.statSync(targetPdfDocs);
       console.log(`SUCCESS: Created ${item.pdf} (${(stats.size / 1024).toFixed(1)} KB)`);
-      fs.copyFileSync(targetPdfDocs, targetPdfRoot);
+      if (item.copyToRoot) {
+        fs.copyFileSync(targetPdfDocs, targetPdfRoot);
+        console.log(`  Copied to root`);
+      }
       fs.copyFileSync(targetPdfDocs, targetPdfPublic);
-      console.log(`  Copied to root & public/`);
+      console.log(`  Copied to public/`);
     } else {
       console.error(`ERROR: Failed to generate ${item.pdf}`);
     }

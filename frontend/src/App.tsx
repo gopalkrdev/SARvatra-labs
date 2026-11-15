@@ -11,6 +11,7 @@ import { LocalImpact } from './components/LocalImpact';
 import { ScienceExplainer } from './components/ScienceExplainer';
 import { DataCatalogModal } from './components/DataCatalogModal';
 import { ExportPanel } from './components/ExportPanel';
+import { FutureRoadmap } from './components/FutureRoadmap';
 import { Footer } from './components/Footer';
 
 // World-Class Disaster Intelligence & Scientific Modals
@@ -344,6 +345,9 @@ export const App: React.FC = () => {
 
           {/* Reproducible Research & Geospatial Export Hub (with Google Earth KML & QGIS) */}
           <ExportPanel analysis={analysis} />
+
+          {/* Global Vision & Future Roadmap (Scalability & Multi-Hazard Horizon) */}
+          <FutureRoadmap />
 
         </div>
 

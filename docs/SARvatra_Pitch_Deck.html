@@ -665,7 +665,179 @@
           <div style="font-size: 11px; font-weight: 800; color: #0f3b82; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 5px;">
             <span>&#128680;</span> End-to-End Operational Pipeline
           </div>
-          <img src="images/sarvatra_pipeline_flowchart.svg" alt="SARvatra End-to-End Operational Architecture Flowchart" style="max-height: 445px; width: 100%; object-fit: contain; border-radius: 4px;" />
+          <div style="width: 100%; max-height: 445px; display: flex; justify-content: center;">
+<svg style="max-height: 445px; width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 595" width="100%" height="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#94a3b8" />
+    </marker>
+    <!-- Blue arrow marker for app branches -->
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 z" fill="#3b82f6" />
+    </marker>
+    
+    <!-- Gradients -->
+    <linearGradient id="emergencyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="responderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="cardShadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <!-- 1. Top Pill: Flood Emergency in Assam -->
+  <rect x="65" y="4" width="250" height="26" rx="13" fill="url(#emergencyGrad)" filter="url(#cardShadow)" />
+  <text x="190" y="21" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800" letter-spacing="0.5">🚨 FLOOD EMERGENCY IN ASSAM</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="190" y1="30" x2="190" y2="40" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 2. Problem Card -->
+  <rect x="25" y="41" width="330" height="28" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="54" text-anchor="middle" fill="#991b1b" font-size="10.2" font-weight="700">Problem: Heavy rain &amp; dense clouds block optical satellites</text>
+  <text x="190" y="64" text-anchor="middle" fill="#b91c1c" font-size="9" font-weight="600">Sentinel-2 &amp; Landsat suffer 0% visibility during peak floods</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="190" y1="69" x2="190" y2="78" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 3. NISAR Satellite Data Card -->
+  <rect x="40" y="79" width="300" height="27" rx="6" fill="#f0f7ff" stroke="#bae6fd" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="92" text-anchor="middle" fill="#0369a1" font-size="10.5" font-weight="800">🛰️ NASA-ISRO NISAR S-Band SAR Satellite Data</text>
+  <text x="190" y="102" text-anchor="middle" fill="#0284c7" font-size="8.8" font-weight="600">3.2 GHz • 9.3 cm Microwaves Pierce Cloud Cover 24/7</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="190" y1="106" x2="190" y2="115" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 4. Data Collection Card -->
+  <rect x="45" y="116" width="290" height="27" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="129" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="700">Data Collection: Pre-Flood + Peak-Flood HDF5 Data</text>
+  <text x="190" y="139" text-anchor="middle" fill="#3b82f6" font-size="8.8" font-weight="600">15-Jul &amp; 22-Jul 2024 Level-2 GCOV Calibrated Radiometry</text>
+
+  <!-- Arrow 4 -> 5 -->
+  <line x1="190" y1="143" x2="190" y2="152" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 5. Python + h5py Card -->
+  <rect x="75" y="153" width="230" height="24" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="169" text-anchor="middle" fill="#0f172a" font-size="10.2" font-weight="800">🐍 Python + h5py Read Satellite Data</text>
+
+  <!-- Arrow 5 -> 6 -->
+  <line x1="190" y1="177" x2="190" y2="186" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 6. Adaptive Lee Filter Card -->
+  <rect x="45" y="187" width="290" height="27" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="200" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="700">Adaptive Lee Filter (5×5 Window)</text>
+  <text x="190" y="210" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">Reduces Radar Speckle Noise • Preserves Road Embankments</text>
+
+  <!-- Arrow 6 -> 7 -->
+  <line x1="190" y1="214" x2="190" y2="223" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 7. Dual-Regime Radar Analysis Header Card -->
+  <rect x="60" y="224" width="260" height="24" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.3" filter="url(#cardShadow)" />
+  <text x="190" y="240" text-anchor="middle" fill="#15803d" font-size="10.8" font-weight="800">⚡ Dual-Regime Radar Analysis</text>
+
+  <!-- Branching Arrows to 8A and 8B -->
+  <path d="M 190 248 L 190 254 L 97 254 L 97 262" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+  <path d="M 190 248 L 190 254 L 283 254 L 283 262" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 8A. Open Water Detection -->
+  <rect x="15" y="263" width="164" height="32" rx="6" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="97" y="277" text-anchor="middle" fill="#0369a1" font-size="9.8" font-weight="800">Open Water Detection</text>
+  <text x="97" y="289" text-anchor="middle" fill="#0284c7" font-size="8.6" font-weight="700">Specular Drop (σ° &lt; −16 dB)</text>
+
+  <!-- 8B. Hidden Flood Detection -->
+  <rect x="201" y="263" width="164" height="32" rx="6" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="283" y="277" text-anchor="middle" fill="#3730a3" font-size="9.8" font-weight="800">Hidden Flood Detection</text>
+  <text x="283" y="289" text-anchor="middle" fill="#4f46e5" font-size="8.6" font-weight="700">Double-Bounce Spike (Δσ° &gt; +3 dB)</text>
+
+  <!-- Converging Arrows 8A and 8B -> 9 -->
+  <path d="M 97 295 L 97 303 L 190 303 L 190 310" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+  <path d="M 283 295 L 283 303 L 190 303" fill="none" stroke="#94a3b8" stroke-width="1.5" />
+
+  <!-- 9. Combine with Copernicus DEM -->
+  <rect x="35" y="311" width="310" height="27" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="324" text-anchor="middle" fill="#1e293b" font-size="10.2" font-weight="800">Combine Results with Copernicus DEM Elevation Data</text>
+  <text x="190" y="334" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">30m GLO-30 Topography • Calibrates Flood Depths</text>
+
+  <!-- Arrow 9 -> 10 -->
+  <line x1="190" y1="338" x2="190" y2="346" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 10. GIS-Based Flood Mapping -->
+  <rect x="50" y="347" width="280" height="26" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="360" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="800">GIS-Based Flood Mapping • Identify Inundated Areas</text>
+  <text x="190" y="369" text-anchor="middle" fill="#3b82f6" font-size="8.5" font-weight="600">131.05 km² Total Inundation (59.6% Sub-Canopy)</text>
+
+  <!-- Arrow 10 -> 11 -->
+  <line x1="190" y1="373" x2="190" y2="381" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 11. Road Classification Card -->
+  <rect x="30" y="382" width="320" height="28" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="395" text-anchor="middle" fill="#9a3412" font-size="10" font-weight="800">Road Corridor Classification</text>
+  <text x="190" y="405" text-anchor="middle" fill="#c2410c" font-size="8.8" font-weight="700">🔴 Submerged Roads (NH-715)  •  🟢 Potentially Safe Roads</text>
+
+  <!-- Arrow 11 -> 12 -->
+  <line x1="190" y1="410" x2="190" y2="418" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 12. Central Web App Box -->
+  <rect x="35" y="419" width="310" height="27" rx="6" fill="url(#appGrad)" filter="url(#cardShadow)" />
+  <text x="190" y="436" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="900" letter-spacing="0.5">SARvatra Web Application</text>
+
+  <!-- Branching Arrows from App to 4 Modules -->
+  <path d="M 190 446 L 190 452 L 53 452 L 53 459" fill="none" stroke="#3b82f6" stroke-width="1.3" marker-end="url(#arr-blue)" />
+  <path d="M 190 446 L 190 452 L 144 452 L 144 459" fill="none" stroke="#3b82f6" stroke-width="1.3" marker-end="url(#arr-blue)" />
+  <path d="M 190 446 L 190 452 L 236 452 L 236 459" fill="none" stroke="#3b82f6" stroke-width="1.3" marker-end="url(#arr-blue)" />
+  <path d="M 190 446 L 190 452 L 327 452 L 327 459" fill="none" stroke="#3b82f6" stroke-width="1.3" marker-end="url(#arr-blue)" />
+
+  <!-- 13. Four Application Modules -->
+  <!-- Mod 1: Interactive Flood Map -->
+  <rect x="12" y="460" width="82" height="32" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" filter="url(#cardShadow)" />
+  <text x="53" y="473" text-anchor="middle" fill="#0f3b82" font-size="8.3" font-weight="800">Interactive</text>
+  <text x="53" y="485" text-anchor="middle" fill="#0284c7" font-size="8.3" font-weight="700">Flood Map</text>
+
+  <!-- Mod 2: Boat Mode Offline Cached Maps -->
+  <rect x="103" y="460" width="82" height="32" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" filter="url(#cardShadow)" />
+  <text x="144" y="473" text-anchor="middle" fill="#0f3b82" font-size="8.3" font-weight="800">Boat Mode</text>
+  <text x="144" y="485" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700">Offline Cached</text>
+
+  <!-- Mod 3: Command SitRep PDF Reports -->
+  <rect x="195" y="460" width="82" height="32" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" filter="url(#cardShadow)" />
+  <text x="236" y="473" text-anchor="middle" fill="#0f3b82" font-size="8.3" font-weight="800">Command SitRep</text>
+  <text x="236" y="485" text-anchor="middle" fill="#0284c7" font-size="7.8" font-weight="700">PDF Reports</text>
+
+  <!-- Mod 4: Scientific Lab Radar Threshold Controls -->
+  <rect x="286" y="460" width="82" height="32" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" filter="url(#cardShadow)" />
+  <text x="327" y="473" text-anchor="middle" fill="#0f3b82" font-size="8.3" font-weight="800">Scientific Lab</text>
+  <text x="327" y="485" text-anchor="middle" fill="#0284c7" font-size="7.5" font-weight="700">Radar Controls</text>
+
+  <!-- Converging Lines from 4 Modules to Emergency Information -->
+  <path d="M 53 492 L 53 500 L 190 500 L 190 508" fill="none" stroke="#94a3b8" stroke-width="1.3" marker-end="url(#arr)" />
+  <path d="M 144 492 L 144 500" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+  <path d="M 236 492 L 236 500" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+  <path d="M 327 492 L 327 500 L 190 500" fill="none" stroke="#94a3b8" stroke-width="1.3" />
+
+  <!-- 14. Emergency Information Card -->
+  <rect x="100" y="509" width="180" height="23" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" filter="url(#cardShadow)" />
+  <text x="190" y="524" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="800">Emergency Information</text>
+
+  <!-- Arrow 14 -> 15 -->
+  <line x1="190" y1="532" x2="190" y2="541" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- 15. Bottom Pill: ASDMA • NDRF • SDRF Rescue Teams • Citizens -->
+  <rect x="25" y="542" width="330" height="28" rx="14" fill="url(#responderGrad)" filter="url(#cardShadow)" />
+  <text x="190" y="559" text-anchor="middle" fill="#ffffff" font-size="10.8" font-weight="800" letter-spacing="0.3">ASDMA • NDRF • SDRF Rescue Teams • Citizens</text>
+</svg>
+</div>
         </div>
       </div>
     </div>

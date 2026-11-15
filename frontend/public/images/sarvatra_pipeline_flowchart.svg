@@ -47,7 +47,7 @@
   <!-- 3. NISAR Satellite Data Card -->
   <rect x="40" y="79" width="300" height="27" rx="6" fill="#f0f7ff" stroke="#bae6fd" stroke-width="1.2" filter="url(#cardShadow)" />
   <text x="190" y="92" text-anchor="middle" fill="#0369a1" font-size="10.5" font-weight="800">🛰️ NASA-ISRO NISAR S-Band SAR Satellite Data</text>
-  <text x="190" y="102" text-anchor="middle" fill="#0284c7" font-size="8.8" font-weight="600">3.2 GHz &bull; 9.3 cm Microwaves Pierce Cloud Cover 24/7</text>
+  <text x="190" y="102" text-anchor="middle" fill="#0284c7" font-size="8.8" font-weight="600">3.2 GHz • 9.3 cm Microwaves Pierce Cloud Cover 24/7</text>
 
   <!-- Arrow 3 -> 4 -->
   <line x1="190" y1="106" x2="190" y2="115" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
@@ -69,8 +69,8 @@
 
   <!-- 6. Adaptive Lee Filter Card -->
   <rect x="45" y="187" width="290" height="27" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#cardShadow)" />
-  <text x="190" y="200" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="700">Adaptive Lee Filter (5&times;5 Window)</text>
-  <text x="190" y="210" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">Reduces Radar Speckle Noise &bull; Preserves Road Embankments</text>
+  <text x="190" y="200" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="700">Adaptive Lee Filter (5×5 Window)</text>
+  <text x="190" y="210" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">Reduces Radar Speckle Noise • Preserves Road Embankments</text>
 
   <!-- Arrow 6 -> 7 -->
   <line x1="190" y1="214" x2="190" y2="223" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
@@ -79,36 +79,36 @@
   <rect x="60" y="224" width="260" height="24" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.3" filter="url(#cardShadow)" />
   <text x="190" y="240" text-anchor="middle" fill="#15803d" font-size="10.8" font-weight="800">⚡ Dual-Regime Radar Analysis</text>
 
-  <!-- Branching Arrows to 8A & 8B -->
+  <!-- Branching Arrows to 8A and 8B -->
   <path d="M 190 248 L 190 254 L 97 254 L 97 262" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
   <path d="M 190 248 L 190 254 L 283 254 L 283 262" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
 
   <!-- 8A. Open Water Detection -->
   <rect x="15" y="263" width="164" height="32" rx="6" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.2" filter="url(#cardShadow)" />
   <text x="97" y="277" text-anchor="middle" fill="#0369a1" font-size="9.8" font-weight="800">Open Water Detection</text>
-  <text x="97" y="289" text-anchor="middle" fill="#0284c7" font-size="8.6" font-weight="700">Specular Drop (&sigma;&deg; &lt; &minus;16 dB)</text>
+  <text x="97" y="289" text-anchor="middle" fill="#0284c7" font-size="8.6" font-weight="700">Specular Drop (σ° &lt; −16 dB)</text>
 
   <!-- 8B. Hidden Flood Detection -->
   <rect x="201" y="263" width="164" height="32" rx="6" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.2" filter="url(#cardShadow)" />
   <text x="283" y="277" text-anchor="middle" fill="#3730a3" font-size="9.8" font-weight="800">Hidden Flood Detection</text>
-  <text x="283" y="289" text-anchor="middle" fill="#4f46e5" font-size="8.6" font-weight="700">Double-Bounce Spike (&Delta;&sigma;&deg; &gt; +3 dB)</text>
+  <text x="283" y="289" text-anchor="middle" fill="#4f46e5" font-size="8.6" font-weight="700">Double-Bounce Spike (Δσ° &gt; +3 dB)</text>
 
-  <!-- Converging Arrows 8A & 8B -> 9 -->
+  <!-- Converging Arrows 8A and 8B -> 9 -->
   <path d="M 97 295 L 97 303 L 190 303 L 190 310" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
   <path d="M 283 295 L 283 303 L 190 303" fill="none" stroke="#94a3b8" stroke-width="1.5" />
 
   <!-- 9. Combine with Copernicus DEM -->
   <rect x="35" y="311" width="310" height="27" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)" />
   <text x="190" y="324" text-anchor="middle" fill="#1e293b" font-size="10.2" font-weight="800">Combine Results with Copernicus DEM Elevation Data</text>
-  <text x="190" y="334" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">30m GLO-30 Topography &bull; Calibrates Flood Depths</text>
+  <text x="190" y="334" text-anchor="middle" fill="#64748b" font-size="8.8" font-weight="600">30m GLO-30 Topography • Calibrates Flood Depths</text>
 
   <!-- Arrow 9 -> 10 -->
   <line x1="190" y1="338" x2="190" y2="346" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
 
   <!-- 10. GIS-Based Flood Mapping -->
   <rect x="50" y="347" width="280" height="26" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#cardShadow)" />
-  <text x="190" y="360" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="800">GIS-Based Flood Mapping &bull; Identify Inundated Areas</text>
-  <text x="190" y="369" text-anchor="middle" fill="#3b82f6" font-size="8.5" font-weight="600">131.05 km&sup2; Total Inundation (59.6% Sub-Canopy)</text>
+  <text x="190" y="360" text-anchor="middle" fill="#1e40af" font-size="10.2" font-weight="800">GIS-Based Flood Mapping • Identify Inundated Areas</text>
+  <text x="190" y="369" text-anchor="middle" fill="#3b82f6" font-size="8.5" font-weight="600">131.05 km² Total Inundation (59.6% Sub-Canopy)</text>
 
   <!-- Arrow 10 -> 11 -->
   <line x1="190" y1="373" x2="190" y2="381" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
@@ -116,7 +116,7 @@
   <!-- 11. Road Classification Card -->
   <rect x="30" y="382" width="320" height="28" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.2" filter="url(#cardShadow)" />
   <text x="190" y="395" text-anchor="middle" fill="#9a3412" font-size="10" font-weight="800">Road Corridor Classification</text>
-  <text x="190" y="405" text-anchor="middle" fill="#c2410c" font-size="8.8" font-weight="700">🔴 Submerged Roads (NH-715) &nbsp;&bull;&nbsp; 🟢 Potentially Safe Roads</text>
+  <text x="190" y="405" text-anchor="middle" fill="#c2410c" font-size="8.8" font-weight="700">🔴 Submerged Roads (NH-715)  •  🟢 Potentially Safe Roads</text>
 
   <!-- Arrow 11 -> 12 -->
   <line x1="190" y1="410" x2="190" y2="418" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)" />
@@ -167,5 +167,5 @@
 
   <!-- 15. Bottom Pill: ASDMA • NDRF • SDRF Rescue Teams • Citizens -->
   <rect x="25" y="542" width="330" height="28" rx="14" fill="url(#responderGrad)" filter="url(#cardShadow)" />
-  <text x="190" y="559" text-anchor="middle" fill="#ffffff" font-size="10.8" font-weight="800" letter-spacing="0.3">ASDMA &bull; NDRF &bull; SDRF Rescue Teams &bull; Citizens</text>
+  <text x="190" y="559" text-anchor="middle" fill="#ffffff" font-size="10.8" font-weight="800" letter-spacing="0.3">ASDMA • NDRF • SDRF Rescue Teams • Citizens</text>
 </svg>

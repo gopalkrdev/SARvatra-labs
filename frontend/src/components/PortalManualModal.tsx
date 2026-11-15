@@ -62,8 +62,8 @@ export const PortalManualModal: React.FC<PortalManualModalProps> = ({
 
           <div className="flex items-center space-x-2">
             <a
-              href="/SARvatra_Portal_Standard_Operating_Procedure.pdf"
-              download="SARvatra_Portal_Standard_Operating_Procedure.pdf"
+              href="/SARvatra_Operating_Manual.pdf"
+              download="SARvatra_Operating_Manual.pdf"
               className="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-mono font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md"
               title="Download Official User Guidelines & SOP PDF"
             >
@@ -327,20 +327,20 @@ export const PortalManualModal: React.FC<PortalManualModalProps> = ({
         <div className="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
           <div className="flex items-center space-x-2">
             <a
-              href="/SARvatra_Portal_Standard_Operating_Procedure.pdf"
-              download="SARvatra_Portal_Standard_Operating_Procedure.pdf"
+              href="/SARvatra_Operating_Manual.pdf"
+              download="SARvatra_Operating_Manual.pdf"
               className="flex items-center space-x-1.5 px-3 py-1 rounded bg-emerald-700 hover:bg-emerald-600 text-white font-bold transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Guidelines PDF (393 KB)</span>
+              <span>Operating Manual PDF</span>
             </a>
             <a
-              href="/SARvatra_Lab_Master_Presentation_Dossier.pdf"
-              download="SARvatra_Lab_Master_Presentation_Dossier.pdf"
+              href="/SARvatra_Technical_Dossier.pdf"
+              download="SARvatra_Technical_Dossier.pdf"
               className="hidden sm:flex items-center space-x-1.5 px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition-colors"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>Full Dossier PDF</span>
+              <span>NASA Technical Dossier</span>
             </a>
           </div>
           <button

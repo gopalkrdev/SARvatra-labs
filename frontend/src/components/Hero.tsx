@@ -138,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               {/* Button 2: View 7-Slide Pitch Deck (Outline Violet) */}
               <a
-                href="/SARvatra_Lab_Master_7_Slide_Winner.pdf"
+                href="/SARvatra_Pitch_Deck.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 px-4 py-3 rounded-xl bg-slate-950/90 hover:bg-violet-950/60 text-violet-300 border border-violet-500/50 hover:border-violet-400 text-xs sm:text-sm font-bold transition-all shadow-sm transform hover:scale-[1.02]"

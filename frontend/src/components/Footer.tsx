@@ -33,28 +33,28 @@ export const Footer: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-2">
             <a
-              href="/SARvatra_Lab_Official_7_Slide_Demo.pdf"
-              download="SARvatra_Lab_Official_7_Slide_Demo.pdf"
+              href="/SARvatra_Pitch_Deck.pdf"
+              download="SARvatra_Pitch_Deck.pdf"
               className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center space-x-1.5 transition-colors shadow-sm"
-              title="Official 7-Slide Winner Presentation Deck required for Global Judging"
+              title="Official 7-Slide Presentation Deck required for NASA Space Apps Judging"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>Official 7-Slide Winner Deck (PDF)</span>
+              <span>7-Slide Pitch Deck (PDF)</span>
             </a>
 
             <a
-              href="/SARvatra_Lab_Winner_Presentation.pdf"
-              download="SARvatra_Lab_Winner_Presentation.pdf"
+              href="/SARvatra_Technical_Dossier.pdf"
+              download="SARvatra_Technical_Dossier.pdf"
               className="px-3 py-1.5 rounded-lg bg-cyan-700 hover:bg-cyan-600 text-white font-bold flex items-center space-x-1.5 transition-colors shadow-sm"
-              title="Global Award Winner Structured Presentation (PDF)"
+              title="Comprehensive NASA Space Apps Challenge Technical Dossier (PDF)"
             >
-              <Award className="w-3.5 h-3.5 text-amber-300" />
-              <span>Winner Deck Mirror (PDF)</span>
+              <Award className="w-3.5 h-3.5 text-cyan-300" />
+              <span>NASA Technical Dossier (PDF)</span>
             </a>
 
             <a
-              href="/Sivasagar_Disaster_SitRep_Official.pdf"
-              download="Sivasagar_Disaster_SitRep_Official.pdf"
+              href="/Sivasagar_Disaster_SitRep.pdf"
+              download="Sivasagar_Disaster_SitRep.pdf"
               className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-500/40 font-bold flex items-center space-x-1.5 transition-colors"
             >
               <FileText className="w-3.5 h-3.5 text-rose-400" />
@@ -62,21 +62,21 @@ export const Footer: React.FC = () => {
             </a>
 
             <a
-              href="/SARvatra_Portal_Standard_Operating_Procedure.pdf"
-              download="SARvatra_Portal_Standard_Operating_Procedure.pdf"
+              href="/SARvatra_Operating_Manual.pdf"
+              download="SARvatra_Operating_Manual.pdf"
               className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-bold flex items-center space-x-1.5 transition-colors"
             >
               <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
-              <span>SOP Manual (PDF)</span>
+              <span>Operating Manual (PDF)</span>
             </a>
 
             <a
-              href="/SARvatra_Lab_Complete_Project_Notebook.ipynb"
-              download="SARvatra_Lab_Complete_Project_Notebook.ipynb"
+              href="/SARvatra_Research_Pipeline.ipynb"
+              download="SARvatra_Research_Pipeline.ipynb"
               className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/40 font-bold flex items-center space-x-1.5 transition-colors"
             >
               <Terminal className="w-3.5 h-3.5 text-amber-400" />
-              <span>Jupyter Notebook (.ipynb)</span>
+              <span>SAR Pipeline (Jupyter .ipynb)</span>
             </a>
           </div>
         </div>

@@ -3,9 +3,16 @@
 > **"See What Water Changes. Understand What Earth Reveals."**  
 > *From Satellite Radar to Ground Reality.*
 
-**NASA Space Apps Challenge 2026** &bull; **Challenge:** Dancing with SAR  
+**NASA Space Apps Challenge 2026** &bull; **Challenge:** Dancing with the SARs  
 **Primary Research Topic:** NISAR-Based Flood-Related Surface Change Detection and Visualization  
 **Study Area:** Sivasagar District & Brahmaputra Basin, Assam, India  
+**Live Production Gateway:** [https://sarvatra-labs.vercel.app](https://sarvatra-labs.vercel.app)  
+**Primary Deliverables:**
+- 📊 **Official 7-Slide Pitch Deck:** [`SARvatra_Pitch_Deck.pdf`](./SARvatra_Pitch_Deck.pdf)
+- 📓 **Reproducible Research Notebook:** [`SARvatra_Research_Pipeline.ipynb`](./SARvatra_Research_Pipeline.ipynb)
+- 📑 **Comprehensive Technical Dossier:** [`docs/SARvatra_Technical_Dossier.pdf`](./docs/SARvatra_Technical_Dossier.pdf)
+- 🚨 **Sivasagar Disaster SitRep:** [`docs/Sivasagar_Disaster_SitRep.pdf`](./docs/Sivasagar_Disaster_SitRep.pdf)
+- 📖 **Operating Manual & SOP:** [`docs/SARvatra_Operating_Manual.pdf`](./docs/SARvatra_Operating_Manual.pdf)
 
 ---
 
@@ -107,12 +114,32 @@ d:\SARvatra_-labs\
 │   ├── previews/                 # Map raster overlays
 │   └── reports/                  # JSON analysis manifests
 ├── docs/                         # Scientific & architectural documentation
+│   ├── SARvatra_Pitch_Deck.pdf   # Official 7-Slide presentation
+│   ├── SARvatra_Technical_Dossier.pdf # In-depth technical submission report
+│   ├── Sivasagar_Disaster_SitRep.pdf # Field Situation Report
+│   ├── SARvatra_Operating_Manual.pdf # Portal manual and SOP
 │   ├── SCIENTIFIC_METHOD.md
 │   ├── DATA_SOURCES.md
 │   ├── ARCHITECTURE.md
 │   └── LIMITATIONS.md
+├── SARvatra_Pitch_Deck.pdf       # Primary NASA Space Apps 7-Slide Presentation
+├── SARvatra_Research_Pipeline.ipynb # Verified Jupyter Radar Processing Pipeline
 ├── run_windows.bat               # Windows one-click launcher
 └── README.md
+```
+
+---
+
+## 👥 SARvatra Lab Team & Responsibilities
+
+| Team Member | Project Role & Functional Responsibilities |
+| :--- | :--- |
+| **Gopal Kumar** | **Lead System Architecture & S-Band Pipeline** &bull; Full-stack platform engineering, HDF5 L2 GCOV ingestion, and NASA Space Apps deliverables alignment. |
+| **Simran** | **Hydrological Ground-Truth & CWC Validation** &bull; Central Water Commission Desangmukh gauge correlation, confusion matrix, and Cohen's Kappa evaluation. |
+| **Dhruv** | **Radar Signal Processing & Speckle Filters** &bull; 5x5 Adaptive Lee filter implementation, radiometric calibration, and SNR gain benchmarking. |
+| **Shiva** | **Geospatial Data Engineering & GIS** &bull; EPSG:32646 coordinate transformation, Sivasagar district boundary clipping, and GeoJSON topology verification. |
+| **Shubneet Kaur** | **Disaster Response UX & Multilingual Localization** &bull; Field responder interface design, ASDMA SitRep reporting templates, and Assamese/Hindi translation models. |
+| **Prince Kumar** | **Edge Computing & Offline Boat Mode** &bull; Progressive Web App architecture, IndexedDB client caching, and low-connectivity disaster resilience. |
 ```
 
 ---

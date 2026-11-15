@@ -57,8 +57,8 @@ export const DisasterSitRepModal: React.FC<DisasterSitRepModalProps> = ({
           <div className="flex items-center space-x-2">
             {/* Direct Official PDF Download Button */}
             <a
-              href="/Sivasagar_Disaster_SitRep_Official.pdf"
-              download="Sivasagar_Disaster_SitRep_Official.pdf"
+              href="/Sivasagar_Disaster_SitRep.pdf"
+              download="Sivasagar_Disaster_SitRep.pdf"
               className="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-mono font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md"
               title="Download Original Official PDF (DDMA Sealed)"
             >
@@ -110,20 +110,20 @@ export const DisasterSitRepModal: React.FC<DisasterSitRepModalProps> = ({
             </div>
             <div className="flex space-x-2 shrink-0">
               <a
-                href="/Sivasagar_Disaster_SitRep_Official.pdf"
-                download="Sivasagar_Disaster_SitRep_Official.pdf"
+                href="/Sivasagar_Disaster_SitRep.pdf"
+                download="Sivasagar_Disaster_SitRep.pdf"
                 className="px-2.5 py-1 bg-emerald-700 hover:bg-emerald-600 text-white font-bold rounded text-[11px] flex items-center space-x-1"
               >
                 <Download className="w-3 h-3" />
                 <span>SitRep PDF (158 KB)</span>
               </a>
               <a
-                href="/SARvatra_Lab_Master_Presentation_Dossier.pdf"
-                download="SARvatra_Lab_Master_Presentation_Dossier.pdf"
+                href="/SARvatra_Technical_Dossier.pdf"
+                download="SARvatra_Technical_Dossier.pdf"
                 className="px-2.5 py-1 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-[11px] flex items-center space-x-1"
               >
                 <Download className="w-3 h-3" />
-                <span>30-Page Master PDF</span>
+                <span>NASA Dossier PDF</span>
               </a>
             </div>
           </div>
@@ -319,8 +319,8 @@ export const DisasterSitRepModal: React.FC<DisasterSitRepModalProps> = ({
           <span>Official ASDMA Emergency Template &bull; SARvatra Lab</span>
           <div className="flex items-center space-x-2">
             <a
-              href="/Sivasagar_Disaster_SitRep_Official.pdf"
-              download="Sivasagar_Disaster_SitRep_Official.pdf"
+              href="/Sivasagar_Disaster_SitRep.pdf"
+              download="Sivasagar_Disaster_SitRep.pdf"
               className="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center space-x-1 transition-colors"
             >
               <Download className="w-3.5 h-3.5" />

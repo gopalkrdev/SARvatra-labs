@@ -51,13 +51,13 @@ export const NasaSubmissionDossierModal: React.FC<NasaSubmissionDossierModalProp
 
           <div className="flex items-center space-x-2">
             <a
-              href="/SARvatra_Lab_Official_7_Slide_Demo.pdf"
-              download="SARvatra_Lab_Official_7_Slide_Demo.pdf"
+              href="/SARvatra_Pitch_Deck.pdf"
+              download="SARvatra_Pitch_Deck.pdf"
               className="flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold transition-all shadow-md"
-              title="Official 7-Slide Demo Presentation required by NASA Submission Guidelines"
+              title="Official 7-Slide Pitch Deck required by NASA Submission Guidelines"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>7-Slide Demo (PDF)</span>
+              <span>7-Slide Pitch Deck (PDF)</span>
             </a>
             <button
               onClick={handlePrint}

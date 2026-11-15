@@ -168,24 +168,24 @@
     .steps-container {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin: 6px 0 16px 0;
+      gap: 8px;
+      margin: 4px 0 10px 0;
     }
     .step-row {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
       background: #f8fafc;
-      padding: 12px 18px;
+      padding: 9px 14px;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
     }
     .step-badge {
-      width: 36px;
-      height: 36px;
+      width: 30px;
+      height: 30px;
       background: #e11d48;
       color: #ffffff;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 800;
       border-radius: 50%;
       display: flex;
@@ -197,23 +197,25 @@
       flex: 1;
     }
     .step-title {
-      font-size: 16px;
+      font-size: 14.5px;
       font-weight: 700;
       color: #0f172a;
     }
     .step-subtext {
-      font-size: 13.5px;
+      font-size: 12px;
       color: #64748b;
-      margin-top: 2px;
+      margin-top: 1px;
+      line-height: 1.4;
     }
     .step-time-badge {
-      font-size: 15px;
+      font-size: 13.5px;
       font-weight: 800;
       color: #e11d48;
       font-family: monospace;
       background: #fee2e2;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 6px;
+      flex-shrink: 0;
     }
 
     /* Highlight Badge Summary */
@@ -431,74 +433,9 @@
   <div class="slide">
     <div class="slide-1-content">
       
-      <!-- NISAR Scattering Signature Diagram (SVG) -->
-      <div style="display: flex; justify-content: center; margin-bottom: 8px;">
-        <svg width="780" height="152" viewBox="0 0 780 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Background canvas -->
-          <rect x="0" y="0" width="780" height="152" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-          
-          <!-- Satellite in Orbit -->
-          <g transform="translate(360, 6)">
-            <rect x="18" y="10" width="24" height="16" rx="2" fill="#0F3B82"/>
-            <rect x="-18" y="14" width="30" height="8" rx="1" fill="#0284C7"/>
-            <rect x="48" y="14" width="30" height="8" rx="1" fill="#0284C7"/>
-            <path d="M12 28 C12 28, 30 38, 48 28" stroke="#D97706" stroke-width="2.5" fill="none"/>
-            <text x="7" y="6" font-size="9" font-weight="800" fill="#0F3B82" font-family="sans-serif">RADAR SATELLITE (NISAR S-BAND 3.2 GHz)</text>
-          </g>
-
-          <!-- Storm Clouds & Rain -->
-          <g transform="translate(140, 36)">
-            <ellipse cx="60" cy="14" rx="55" ry="12" fill="#CBD5E1" fill-opacity="0.9"/>
-            <ellipse cx="95" cy="10" rx="35" ry="10" fill="#94A3B8" fill-opacity="0.9"/>
-            <text x="18" y="14" font-size="8.5" font-weight="700" fill="#475569" font-family="sans-serif">STORM CLOUDS &amp; RAIN</text>
-            <line x1="20" y1="26" x2="20" y2="44" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="2 2"/>
-            <line x1="50" y1="26" x2="50" y2="44" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="2 2"/>
-            <line x1="80" y1="26" x2="80" y2="44" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="2 2"/>
-            <text x="10" y="40" font-size="7.5" font-weight="700" fill="#DC2626" font-family="sans-serif">OPTICAL BLIND SPOT</text>
-          </g>
-
-          <!-- Microwave Penetrating Rays -->
-          <g stroke="#0284C7" stroke-width="1.8" stroke-dasharray="4 3">
-            <line x1="380" y1="36" x2="220" y2="90"/>
-            <line x1="390" y1="36" x2="420" y2="90"/>
-            <line x1="400" y1="36" x2="620" y2="90"/>
-          </g>
-
-          <!-- Ground Terrain Strip -->
-          <g transform="translate(60, 88)">
-            <!-- Dry Land -->
-            <rect x="40" y="0" width="180" height="22" fill="#E2E8F0" stroke="#CBD5E1"/>
-            <text x="105" y="15" font-size="9.5" font-weight="700" fill="#475569" font-family="sans-serif">DRY LAND</text>
-            <text x="65" y="32" font-size="8" fill="#64748b" font-family="sans-serif">Moderate Scatter (&sigma;° ~ -10 dB)</text>
-
-            <!-- Open Water (Specular Reflection) -->
-            <rect x="230" y="0" width="190" height="22" fill="#BAE6FD" stroke="#38BDF8"/>
-            <path d="M320 0 L260 -30" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="3 2"/>
-            <text x="280" y="15" font-size="9.5" font-weight="800" fill="#0369A1" font-family="sans-serif">OPEN WATER</text>
-            <text x="245" y="-18" font-size="8.5" font-weight="700" fill="#0284C7" font-family="sans-serif">Specular Reflection (Low Return)</text>
-
-            <!-- Flooded Forest / Canopy (Double-Bounce) -->
-            <rect x="430" y="0" width="190" height="22" fill="#BBF7D0" stroke="#4ADE80"/>
-            <polygon points="460,0 470,-16 480,0" fill="#15803D"/>
-            <polygon points="485,0 495,-16 505,0" fill="#15803D"/>
-            <polygon points="510,0 520,-16 530,0" fill="#15803D"/>
-            <path d="M570 0 L560 -12 L550 0 L530 -26" stroke="#D97706" stroke-width="1.8"/>
-            <text x="500" y="15" font-size="9.5" font-weight="800" fill="#14532D" font-family="sans-serif">FLOODED FOREST</text>
-            <text x="470" y="-20" font-size="8.5" font-weight="700" fill="#D97706" font-family="sans-serif">Double-Bounce (High Return)</text>
-          </g>
-
-          <!-- Backscatter Curve -->
-          <g transform="translate(60, 122)">
-            <line x1="40" y1="12" x2="620" y2="12" stroke="#94A3B8" stroke-width="1"/>
-            <path d="M40 8 C140 8, 220 7, 260 22 C290 28, 380 28, 410 16 C430 4, 480 -4, 520 -4 C570 -4, 610 8, 620 8" fill="none" stroke="#DC2626" stroke-width="2"/>
-            <text x="290" y="24" font-size="8" font-weight="800" fill="#DC2626" font-family="sans-serif">Drop (&lt; −16 dB)</text>
-            <text x="495" y="8" font-size="8" font-weight="800" fill="#16A34A" font-family="sans-serif">Spike (&gt; +3 dB)</text>
-          </g>
-        </svg>
-      </div>
-
-      <div style="font-size: 11.5px; font-weight: 700; color: #475569; margin-bottom: 8px;">
-        NISAR S-Band Microwave Scattering Signature: Specular Drop (&lt; −16 dB) vs. Sub-Canopy Double-Bounce Spike (&gt; +3 dB)
+      <!-- NISAR Scattering Signature Diagram (Official Diagram from User) -->
+      <div style="display: flex; justify-content: center; margin-bottom: 6px;">
+        <img src="images/nisar_scattering_signature.jpg" alt="NISAR S-Band Microwave Scattering Signature: Specular Reflection vs Double-Bounce" style="height: 185px; max-width: 95%; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #cbd5e1;" />
       </div>
 
       <h1 class="main-title">SARvatra Labs &mdash; NISAR Flood Intelligence</h1>
@@ -675,48 +612,61 @@
       </div>
       <div class="slide-subtitle">Four-stage scientific pipeline validated against NASA-ISRO NISAR Level-2 GCOV granules and CWC river gauges.</div>
 
-      <div class="steps-container">
-        <div class="step-row">
-          <div class="step-badge">1</div>
-          <div class="step-title-area">
-            <div class="step-title">Fetch NASA-ISRO Data</div>
-            <div class="step-subtext">Stream pre-flood (15-Jul) &amp; peak-flood (22-Jul) NISAR Level-2 GCOV HDF5 rasters via Python <code>h5py</code> + CWC gauges (96.85 m).</div>
+      <div class="two-col-grid" style="grid-template-columns: 1.25fr 0.75fr; gap: 18px; align-items: start; margin-top: 4px;">
+        <!-- Left Column: Four-Stage Quantitative Steps & Timing -->
+        <div>
+          <div class="steps-container">
+            <div class="step-row">
+              <div class="step-badge">1</div>
+              <div class="step-title-area">
+                <div class="step-title">Fetch NASA-ISRO Data</div>
+                <div class="step-subtext">Stream pre-flood (15-Jul) &amp; peak-flood (22-Jul) NISAR Level-2 GCOV HDF5 rasters via Python <code>h5py</code> + CWC gauges (96.85 m).</div>
+              </div>
+              <div class="step-time-badge">3.10 s</div>
+            </div>
+
+            <div class="step-row">
+              <div class="step-badge">2</div>
+              <div class="step-title-area">
+                <div class="step-title">Adaptive Lee Despeckle Filter</div>
+                <div class="step-subtext">Apply a 5&times;5 Adaptive Lee Filter to suppress granular radar speckle noise while preserving sharp embankment &amp; road edges.</div>
+              </div>
+              <div class="step-time-badge">2.45 s</div>
+            </div>
+
+            <div class="step-row">
+              <div class="step-badge">3</div>
+              <div class="step-title-area">
+                <div class="step-title">&Delta;&sigma;&deg; &amp; 3D DEM Depth Fusion</div>
+                <div class="step-subtext">Compute radiometric difference (&Delta;&sigma;&deg;) for open water (&lt; &minus;16 dB) &amp; canopy double-bounce (&gt; +3.0 dB), fused with Copernicus 30m DEM.</div>
+              </div>
+              <div class="step-time-badge">4.89 s</div>
+            </div>
+
+            <div class="step-row">
+              <div class="step-badge">4</div>
+              <div class="step-title-area">
+                <div class="step-title">GIS Road Routing &amp; Offline Sync</div>
+                <div class="step-subtext">Classify Submerged (Red) vs. Safe (Green) highways (NH-715), export ASDMA SitRep PDF / GeoTIFF, and cache locally in IndexedDB.</div>
+              </div>
+              <div class="step-time-badge">2.40 s</div>
+            </div>
           </div>
-          <div class="step-time-badge">3.10 s</div>
+
+          <div class="highlight-badge-box" style="padding: 10px 14px; font-size: 13.5px; gap: 16px; margin-top: 6px;">
+            <div><span>&#9889;</span> <strong>Total Pipeline:</strong> 12.84 s end-to-end</div>
+            <div><span>&#128640;</span> <strong>Cached Boat Mode:</strong> &lt; 100 ms</div>
+            <div><span>&#128187;</span> <strong>Stack:</strong> Python 3.11, h5py, GDAL, React 18, IndexedDB</div>
+          </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">2</div>
-          <div class="step-title-area">
-            <div class="step-title">Adaptive Lee Despeckle Filter</div>
-            <div class="step-subtext">Apply a 5&times;5 Adaptive Lee Filter to suppress granular radar speckle noise while preserving sharp embankment and road edges.</div>
+        <!-- Right Column: Official Operational Architecture Flowchart -->
+        <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+          <div style="font-size: 11px; font-weight: 800; color: #0f3b82; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 4px;">
+            <span>&#128680;</span> End-to-End Operational Pipeline
           </div>
-          <div class="step-time-badge">2.45 s</div>
+          <img src="images/sarvatra_pipeline_flowchart.png" alt="SARvatra End-to-End Operational Architecture Flowchart" style="max-height: 435px; width: auto; object-fit: contain; border-radius: 4px;" />
         </div>
-
-        <div class="step-row">
-          <div class="step-badge">3</div>
-          <div class="step-title-area">
-            <div class="step-title">&Delta;&sigma;&deg; &amp; 3D DEM Depth Transect</div>
-            <div class="step-subtext">Compute radiometric difference (&Delta;&sigma;&deg;) for open water (&lt; &minus;16 dB) &amp; canopy double-bounce (&gt; +3.0 dB), fused with Copernicus 30m DEM.</div>
-          </div>
-          <div class="step-time-badge">4.89 s</div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-badge">4</div>
-          <div class="step-title-area">
-            <div class="step-title">GIS Road Routing &amp; Offline Sync</div>
-            <div class="step-subtext">Classify Submerged (Red) vs. Safe (Green) highways (NH-715), export ASDMA SitRep PDF / GeoTIFF, and cache locally in IndexedDB.</div>
-          </div>
-          <div class="step-time-badge">2.40 s</div>
-        </div>
-      </div>
-
-      <div class="highlight-badge-box">
-        <div><span>&#9889;</span> <strong>Total Pipeline:</strong> 12.84 seconds end-to-end</div>
-        <div><span>&#128640;</span> <strong>Cached Boat Mode:</strong> &lt; 100 ms instant field retrieval</div>
-        <div><span>&#128187;</span> <strong>Stack:</strong> Python 3.11, h5py, GDAL, React 18, TypeScript, IndexedDB</div>
       </div>
     </div>
 

@@ -18,11 +18,23 @@ const FILES_TO_CONVERT = [
   { html: 'SARvatra_Operating_Manual.html', pdf: 'SARvatra_Operating_Manual.pdf', copyToRoot: false }
 ];
 
+const mimeTypes = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'application/javascript',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.svg': 'image/svg+xml',
+  '.pdf': 'application/pdf',
+  '.json': 'application/json'
+};
+
 const server = http.createServer((req, res) => {
   const filePath = path.join(DOCS_DIR, decodeURI(req.url.replace(/^\//, '')));
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     const ext = path.extname(filePath).toLowerCase();
-    const contentType = ext === '.html' ? 'text/html' : ext === '.png' ? 'image/png' : 'application/octet-stream';
+    const contentType = mimeTypes[ext] || 'application/octet-stream';
     res.writeHead(200, { 'Content-Type': contentType });
     fs.createReadStream(filePath).pipe(res);
   } else {
@@ -76,6 +88,10 @@ async function main() {
 
     const url = `http://127.0.0.1:${PORT}/${item.html}`;
     console.log(`Converting ${item.html} -> ${item.pdf}...`);
+
+    if (fs.existsSync(targetPdfDocs)) {
+      try { fs.unlinkSync(targetPdfDocs); } catch (e) {}
+    }
 
     await runEdge([
       '--headless',

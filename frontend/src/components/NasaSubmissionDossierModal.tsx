@@ -219,7 +219,7 @@ export const NasaSubmissionDossierModal: React.FC<NasaSubmissionDossierModalProp
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-[11px] pt-1">
               <div className="p-2 rounded bg-slate-900/80 border border-slate-800">
                 <span className="font-bold text-amber-300">Gopal Kumar</span>
-                <span className="block text-[10px] text-slate-400 font-semibold">Team Leader · Project Architecture</span>
+                <span className="block text-[10px] text-slate-400 font-semibold">Lead System Architecture &amp; S-Band Pipeline</span>
               </div>
               <div className="p-2 rounded bg-slate-900/80 border border-slate-800">
                 <span className="font-bold text-cyan-300">Simran</span>
